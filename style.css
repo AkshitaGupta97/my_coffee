@@ -65,8 +65,13 @@ img {
     max-width: var(--site-max-width);
 }
 
+/*  nvbar   section     */
 header {
+    position: fixed;
+    z-index:4;
+    width: 100%;
     background-color: var(--primary-color);
+    box-shadow: 8px 8px 10px rgb(235, 178, 178);
 }
 header .navbar {
     display: flex;
@@ -76,6 +81,8 @@ header .navbar {
     padding: 22px;
 }
 .navbar .nav-logo .logo-text {
+    font-family: "Miniver", sans-serif;
+    letter-spacing: 3px;
     color: var(--white-color);
     font-size: var(--font-size-xl);
 }
@@ -94,4 +101,73 @@ header .navbar {
     display: flex;
     align-items: center;
     gap: 12px;
+}
+
+/*  hero    section     */
+
+.hero-section {
+    padding: 20px;
+    min-height: 100vh;
+    background-color: var(--primary-color);
+}
+.hero-section .section-content {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    color: var(--white-color);
+    justify-content: space-between;
+}
+.hero-section .hero-details .title {
+    margin-top: 30px;
+    text-decoration: underline;
+    font-size: var(--font-size-xl);
+    color: var(--secondary-color);
+    font-family: 'Miniver', sans-serif;
+    letter-spacing: 1px;
+}
+.hero-section .hero-details .subtitle {
+    font-size: var(--font-size-xl);
+    margin-top: 10px;
+    font-weight: var(--font-weight-semibold);
+    max-width: 80%;
+    text-shadow: 2px -2px 4px rgb(244, 205, 133);
+}
+.hero-section .hero-details .description {
+    color: rgb(237, 194, 115);
+    max-width: 70%;
+    margin: 24px 0 40px;
+    font-size: var(--font-size-m);
+}
+.hero-section .hero-details .description span {
+    color: rgb(99, 97, 97);
+    font-size: var(--font-size-l);
+    text-shadow: 2px -1px 1px rgb(198, 195, 195);
+}
+.hero-section .hero-details .button {
+    padding: 10px 20px;
+    border-radius: var(--border-radius-m);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-weight: var(--font-weight-semibold);
+    transition: 0.3s ease;
+}
+.hero-section .hero-details .buttons {
+    display: flex;
+    gap: 24px;
+}
+.hero-section .hero-details .button:hover, 
+ .hero-section .hero-details .contact-us {
+    background-color: transparent;
+    border:2px solid var(--white-color);
+    color: var(--white-color);
+}
+ .hero-section .hero-details .contact-us:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+ }
+.section-content .hero-image-wrapper {
+    max-width: 500px;
+    margin-right: 20px;
+    margin-top: 14px;
 }
