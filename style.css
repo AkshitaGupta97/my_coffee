@@ -18,13 +18,12 @@
     --light-pink-color: rgb(248, 195, 204);
     --medium-gray-color: rgb(205, 200, 200); 
 
-    /*  colors  */
+    /*  font-size  */
     --font-size-s: 0.9rem;
     --font-size-n: 1rem;
     --font-size-m: 1.12rem;
     --font-size-l: 1.5rem;
     --font-size-xl: 2rem;
-    --font-size-s: 2.3rem;
 
     /*  font-weight */
     --font-weight-normal: 400;
@@ -62,7 +61,7 @@ img {
 .section-content {
     margin: 0 auto;
     padding: 0 22px;
-    max-width: var(--site-max-width);
+  /*  max-width: var(--site-max-width);*/
 }
 
 /*  nvbar   section     */
@@ -102,16 +101,20 @@ header .navbar {
     align-items: center;
     gap: 12px;
 }
+.navbar :where(#menu-open-btn, #menu-close-btn){
+    display: none;
+}
 
 /*  hero    section     */
-
+/* let say height of navbar is 88px then herosection will be*/
 .hero-section {
-    padding: 20px;
+    min-height: calc(100vh - 88px);
     min-height: 100vh;
     background-color: var(--primary-color);
+    overflow: hidden;
 }
 .hero-section .section-content {
-    min-height: 100vh;
+   padding-top: 5rem;
     display: flex;
     align-items: center;
     color: var(--white-color);
@@ -170,4 +173,59 @@ header .navbar {
     max-width: 500px;
     margin-right: 20px;
     margin-top: 14px;
+}
+/*  Responsive media for 900px  */
+@media screen and (max-width: 900px) {
+    /* resizing font-size for smaller media */
+    :root {
+        --font-size-n: 1rem;
+        --font-size-m: 1rem;
+        --font-size-l: 1.3rem;
+        --font-size-xl: 1.8rem;
+    }
+    .navbar .nav-menu {
+        display: block;
+        position: fixed;
+        left: -300px;
+        top: 0;
+        height: 100%;
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--white-color);
+        padding-top: 2rem;
+        
+    }
+    .navbar .nav-menu .nav-link {  
+        display: block;
+        margin-top: 1.4rem;
+        color: var(--dark-color);
+        font-size: var(--font-size-m);
+        background-color: transparent;
+    }
+    .navbar .nav-menu .nav-link:hover {
+        color: var(--white-color);
+        padding: 10px 16px;
+        background-color: var(--secondary-color);
+        border-radius: var(--border-radius-m);
+        transition: 0.3s ease-in;
+    }
+    .navbar :where(#menu-open-btn, #menu-close-btn){
+        display: block;
+        font-size: var(--font-size-l);
+    }
+    .navbar #menu-close-btn {
+        position: absolute;
+        right: 28px;
+        top: 22px;
+    }
+    .navbar #menu-open-btn {
+        color: var(--white-color);
+    }
+    .hero-section .section-content {
+        display: flex;
+        flex-direction: column;
+    }
+
 }
