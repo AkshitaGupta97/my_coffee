@@ -68,6 +68,20 @@ img {
   /*  max-width: var(--site-max-width);*/
 }
 
+.h2-underline::after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    margin-top: 5px;
+    border-radius: var(--border-radius-s);
+}
+
 /*  nvbar   section     */
 header {
     position: fixed;
@@ -214,18 +228,6 @@ header .navbar {
     text-align: center;
     position: relative;
 }
-.about-details .about-title::after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 40%;
-    top: 70%;
-    width: 94px;
-    height: 4px;
-    background-color: var(--secondary-color);
-    margin-top: 5px;
-    border-radius: var(--border-radius-s);
-}
 .about-details .text {
     line-height: 30px;
     margin: 50 0 30;
@@ -253,8 +255,58 @@ header .navbar {
 }
 
 /* Menu styling */
+.menu-section {
+    background-color: rgba(7, 7, 7, 0.874);
+    padding: 4rem 0;
+    color: var(--white-color);
+}
+.menu-section .menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 80px;
+}
+.menu-section .h2-underline {
+    text-align: center;
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    position: relative;
+    margin-bottom: 20px;
+}
 
+.menu-list .menu-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(100% / 3 - 80px);
+}
+.menu-list .menu-item .menu-image {
+    max-width: 80%;
+    aspect-ratio: 1;
+}
 
+.menu-list .menu-item .name {
+    margin: 12px 0;
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-semibold);
+    color: var(--secondary-color);
+}
+.menu-list .menu-item .text {
+    font-size: var(--font-size-m);
+    line-height: 30px;
+    text-align: center;
+}
+
+/*  Responsive media for 1024px  */
+@media screen and (max-width: 1024px){
+    .menu-section .menu-list {
+        gap: 40px;
+    }
+    .menu-section .menu-list .menu-item {
+        width: calc(100% / 2 - 40px);
+    }
+}
 
 
 /*  Responsive media for 900px  */
