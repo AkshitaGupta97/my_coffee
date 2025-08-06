@@ -67,7 +67,13 @@ img {
     padding: 0 22px;
   /*  max-width: var(--site-max-width);*/
 }
-
+.h2-underline {
+    text-align: center;
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-semibold);
+    position: relative;
+    margin-bottom: 20px;
+}
 .h2-underline::after{
     content: "";
     display: block;
@@ -221,13 +227,7 @@ header .navbar {
 .about-section .about-details {
     max-width: 50%;
 }
-.about-details .about-title {
-    font-size: var(--font-size-xl);
-    color: var(--primary-color);
-    padding: 20px;
-    text-align: center;
-    position: relative;
-}
+
 .about-details .text {
     line-height: 30px;
     margin: 50 0 30;
@@ -266,13 +266,6 @@ header .navbar {
     align-items: center;
     gap: 80px;
 }
-.menu-section .h2-underline {
-    text-align: center;
-    font-size: var(--font-size-xl);
-    font-weight: var(--font-weight-semibold);
-    position: relative;
-    margin-bottom: 20px;
-}
 
 .menu-list .menu-item {
     display: flex;
@@ -297,6 +290,43 @@ header .navbar {
     line-height: 30px;
     text-align: center;
 }
+
+/* Testinomials */
+
+.testimonials-section {
+    background-color: var(--light-pink-color);
+    padding: 4rem 0 10rem;
+    color: var(--primary-color);
+}
+.testimonials-section .testimonial {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 38px;
+}
+.testimonials-section .testimonial .name {
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-semibold);
+    color: var(--secondary-color);
+    margin: 10px;
+    margin-bottom: 20px;
+}
+.testimonials-section .testimonial .user-img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+    border-radius: var(--border-radius-circle);
+    object-fit: cover;
+}
+.testimonials-section .testimonial .feedback {
+    font-size: var(--font-size-m);
+    line-height: 30px;
+    text-align: center;
+    max-width: 80%;
+    color: var(--dark-color);
+}
+
 
 /*  Responsive media for 1024px  */
 @media screen and (max-width: 1024px){
@@ -327,7 +357,7 @@ header .navbar {
         width: 100%;
         height: 100%;
         backdrop-filter: blur(2px);  /* this adds, blur effect*/
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgba(114, 113, 113, 0.3);
     }
     .navbar .nav-menu {
         display: block;
@@ -348,16 +378,17 @@ header .navbar {
     }
     .navbar .nav-menu .nav-link {  
         display: block;
-        margin-top: 1.4rem;
-        color: var(--dark-color);
         font-size: var(--font-size-m);
-        background-color: transparent;
-    }
-    .navbar .nav-menu .nav-link:hover {
+        margin-top: 1.4rem;
         color: var(--white-color);
         padding: 10px 16px;
         background-color: var(--secondary-color);
         border-radius: var(--border-radius-m);
+    }
+    .navbar .nav-menu .nav-link:hover {
+        font-size: var(--font-size-l);
+        color: var(--secondary-color);
+        background-color: transparent;
         transition: 0.3s ease-in;
     }
     .navbar :where(#menu-open-btn, #menu-close-btn){
@@ -411,3 +442,4 @@ header .navbar {
     
 
 }
+
