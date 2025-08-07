@@ -7,6 +7,9 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
 
+        <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -152,58 +155,66 @@
     <section class="testimonials-section">
         <h2 class="section-title h2-underline">Testimonials</h2>
         <div class="section-content">
-            <div class="slider-container">
+            <div class="slider-container swiper">
 
                 <div class="slider-wrapper">
-                    <ul class="testimonials-list">
-                        <li class="testimonial">
+                    <ul class="testimonials-list swiper-wrapper">
+                        <li class="testimonial swiper-slide">
                             <img class="user-img" src="https://jooinn.com/images/man39s-face-11.jpg" alt="user">
                             <h3 class="name">John Sey</h3>
                             <i class="feedback">"Absolutely love the cozy atmosphere and the coffee is always perfect! 
                                 Highly recommend this place to all coffee lovers."</i>
                         </li>
-                         <li class="testimonial">
+                         <li class="testimonial swiper-slide">
                             <img class="user-img" src="https://cdn.pixabay.com/photo/2019/11/13/10/49/coffee-4623255_960_720.jpg" alt="user">
                             <h3 class="name">Alexa Messy</h3>
                             <i class="feedback">"The pastries are always fresh and the staff is so welcoming. 
                                 A wonderful place to unwind and enjoy a great cup of coffee!"</i>
                         </li>
 
-                         <li class="testimonial">
+                         <li class="testimonial swiper-slide">
                             <img class="user-img" src="https://images.pexels.com/photos/712513/pexels-photo-712513.jpeg?cs=srgb&dl=pexels-andrea-piacquadio-712513.jpg&fm=jpg" alt="user">
                             <h3 class="name">Tulip Comit</h3>
                             <i class="feedback">"Absolutely love the cozy atmosphere and the coffee is always perfect! 
                                 Highly recommend this place to all coffee lovers."</i>
                         </li>
 
-                         <li class="testimonial">
+                         <li class="testimonial swiper-slide">
                             <img class="user-img" src="https://alchetron.com/cdn/jakobe-mansztajn-3fc30b65-c72f-4399-8f8d-721f94200a9-resize-750.jpeg" alt="user">
                             <h3 class="name">Jhonson Dew</h3>
                             <i class="feedback">"Great variety on the menu and the coffee is always fresh.
                                  Love the cozy vibe!"</i>
                         </li>
 
-                        <li class="testimonial">
+                        <li class="testimonial swiper-slide">
                             <img class="user-img" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg" alt="user">
                             <h3 class="name">Sarah Jhon</h3>
                             <i class="feedback">"Absolutely love the cozy atmosphere and the coffee is always perfect! 
                                 Highly recommend this place to all coffee lovers."</i>
                         </li>
 
-                        <li class="testimonial">
+                        <li class="testimonial swiper-slide">
                             <img class="user-img" src="https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?cs=srgb&dl=pexels-andrea-piacquadio-762020.jpg&fm=jpg" alt="user">
                             <h3 class="name">Karen Wilsome</h3>
                             <i class="feedback">"The desserts are delicious and the staff is super friendly. 
                                 My favorite spot to relax after work!"</i>
                         </li>
                     </ul>
+
+                     <!-- If we need pagination -->
+                    <div class="swiper-pagination swiper-slide-button"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev swiper-slide-button"></div>
+                    <div class="swiper-button-next swiper-slide-button"></div>
                 </div>
 
             </div>
         </div>
     </section>
 
-
+    <!--Swipper js script-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
