@@ -15,7 +15,7 @@
     --dark-color: #252525;
     --primary-color: #3b141c;
     --secondary-color: #f3961c;
-    --light-pink-color: rgb(246, 213, 218);
+    --light-pink-color: rgb(246, 232, 234);
     --medium-gray-color: rgb(205, 200, 200); 
 
     /*  font-size  */
@@ -43,6 +43,8 @@
 html, body {
     height: 100vh;
     width: 100%;
+    overflow-x: hidden; /* this will hide horizontal scroll bar */
+    scroll-behavior: smooth; /* this will make smooth scrolling */
 }
 /* allign all content in same margins */
 /*.body-container {
@@ -344,6 +346,25 @@ header .navbar {
     transform: 0.3s ease;
 }
 
+/*  Gallery Section     */
+.gallery-section {
+    background-color: var(--white-color);
+    padding: 4rem 0 10rem;
+}
+.gallery-section .gallery-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.gallery-section .gallery-list .gallery-image {
+    width: calc(100% / 3 - 30px);
+}
+.gallery-section .gallery-item .gallert-image {
+    width: 100%;
+    height: 100%;
+    cursor: zoom-in;
+}
+
 /*  Responsive media for 1024px  */
 @media screen and (max-width: 1024px){
     .menu-section .menu-list {
@@ -459,3 +480,19 @@ header .navbar {
 
 }
 
+/* Responsive media  for 640px*/
+@media screen and (max-width: 500px){
+    .menu-section .menu-list {
+        gap: 60px;
+    }
+    .menu-section .menu-list .menu-item {
+        width: 100%;
+    }
+
+    .testimonials-section .slider-wrapper {
+        margin: 0 20px 60px;
+    }
+    .testimonials-section .swiper-slide-button {
+        display: none;
+    }
+}
