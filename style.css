@@ -377,7 +377,7 @@ header .navbar {
 
 .contact-section {
     background-color: var(--light-gray-color);
-    padding: 4rem 0;
+    padding: 4rem 2rem;
     color: var(--primary-color);
 }
 .contact-section .section-content {
@@ -396,6 +396,9 @@ header .navbar {
     color: rgb(1, 79, 79);
     font-size: var(--font-size-m);
 }
+.contact-section .contact-form {
+    max-width: 50%;
+}
 .contact-section .contact-form .form-input {
     width: 100%;
     padding: 10px;
@@ -405,6 +408,7 @@ header .navbar {
     margin-bottom: 20px;
 }
 .contact-section .contact-form .form-textarea {
+    width: 100%;
     height: 140px;
     padding: 10px;
     border-radius: var(--border-radius-s);
@@ -417,7 +421,7 @@ header .navbar {
     color: var(--primary-color);
     font-weight: var(--font-weight-semibold);
     margin-top: 20px;
-    font-size: var(--font-size-m);
+    font-size: 16px;
     transition: 0.3s ease;
 }
 .contact-section .contact-form .form-button:hover {
@@ -426,6 +430,42 @@ header .navbar {
     border: 2px solid var(--secondary-color);
 }
 
+/*  Footer Section  */
+footer {
+    background-color: rgba(0, 0, 0, 0.914);
+    color: var(--white-color);
+    padding: 1rem 0;
+    align-items: center;
+}
+.footer .section-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.footer .section-content .social-link-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 8px;
+}
+.footer .section-content .social-link-list .social-link {
+    color: var(--white-color);
+    font-size: var(--font-size-l);
+    transition: 0.3s ease-in;
+}
+.section-content .social-link-list .social-link:hover {
+    color: var(--secondary-color);
+    transform: scale(1.2);
+}
+
+footer .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 22px;
+}
 
 
 
@@ -544,6 +584,11 @@ header .navbar {
     .gallery-section .gallery-list .gallery-item {
         width: calc(100% / 2 - 30px);
     }
+
+    .contact-section .section-content {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
     
 
 }
@@ -554,14 +599,17 @@ header .navbar {
         gap: 60px;
     }
     .menu-section .menu-list .menu-item,
-    .gallery-section .gallery-list .gallery-item {
+    .gallery-section .gallery-list .gallery-item,
+    .contact-section .contact-form {
         width: 100%;
     }
-
     .testimonials-section .slider-wrapper {
         margin: 0 20px 60px;
     }
     .testimonials-section .swiper-slide-button {
         display: none;
+    }
+    .contact-section {
+        padding: 2rem 1rem;
     }
 }
